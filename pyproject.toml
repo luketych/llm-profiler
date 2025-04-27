@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "viscera"
+version = "0.1.0"
+description = "A semi-automated tool for inserting logging statements into Python codebases"
+authors = ["LLM Profiler <profiler@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+GitPython = "^3.1.44"
+click = "^8.1.8"
+python-dotenv = "^1.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+
+[tool.poetry.scripts]
+viscera = "src.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
