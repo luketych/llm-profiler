@@ -1,7 +1,7 @@
-Milestone 2: (from milestones/2024_03_21_02_code_analysis.md)
+# Milestone 3: Logging Insertion
 
 ## Objectives
-- Implement code file traversal
-- Create AST parser for Python files
-- Identify functions in source code
-- Filter out external dependencies
+- Implement logging statement insertion
+- Handle different function types
+- Manage logger setup
+- Ensure proper indentation
